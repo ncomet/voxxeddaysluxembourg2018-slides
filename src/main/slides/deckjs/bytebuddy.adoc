@@ -13,7 +13,7 @@ icon:github[] https://github.com/ncomet
 
 * Developer since 7 years
 
-image::lectra.gif[float="right"]
+image::logolectra130.png[float="right"]
 
 * Software R&D Engineer @Lectra, worldwide leader in integrated softwares, machines and cloud services for soft material industries
 
@@ -25,7 +25,7 @@ image::bordeauxjug.jpg[float="right"]
 
 image::lectra-hires.png[]
 
-== How it began
+== How it all began
 
 _"Making Java more dynamic"_ @Devoxx France 2015
 
@@ -35,16 +35,40 @@ image::rwinterhalter.png[]
 
 image::devoxx.png[]
 
-== Libraries & Frameworks
-
 == Cross Cutting Concerns
 
-== Non-intrusive
+* Non business/domain related
+* Orthogonal
+
+== Examples
+
+* Logging
+* Caching
+* Monitoring
+* Data validation
+* Real time constraints
+* Persistence
+* Transactions
+* ...
+
+== Adding behavior
+
+* Transparent
+* Non intrusive
+
+== Libraries & Frameworks
+
+[quote]
+A *library* is essentially a set of functions that you can call[...] Each call does some work and returns control to the client.
+
+[quote, Martin Fowler]
+A *framework* embodies some abstract design[...] In order to use it you need to insert your behavior into various places in the framework[...] The framework's code then calls your code at these points.
+
+== Simplicity
 
 * Strongly typed
 * Regardless of type
-
-== Adding behavior
+* Lightweight
 
 == Solutions
 
@@ -76,7 +100,7 @@ image::frameworks.png[frameworks, 875, 517]
 
 == Byte Buddy
 
-Open Source (license Apache), utilisé par `Mockito`, `Hibernate`, `Google Bazle`, https://github.com/raphw/byte-buddy/wiki/Projects-using-Byte-Buddy[et d'autres]
+Open Source (license Apache), used by `Mockito`, `Hibernate`, `Google Bazle`, https://github.com/raphw/byte-buddy/wiki/Projects-using-Byte-Buddy[and others]
 
 image::stars-github.png[Stars]
 
