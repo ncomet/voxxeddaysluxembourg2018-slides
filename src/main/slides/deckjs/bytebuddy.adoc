@@ -1,0 +1,102 @@
+= `Byte Buddy` : bytecode gen made _easy_ !
+Nicolas Comet <n.comet@lectra.com>
+:icons: font
+
+image::javaone-logo.png[float=right, bandeau, 100]
+
+== Who I am
+
+image::avatar.jpg[float="right"]
+
+icon:twitter[] @NicolasComet +
+icon:github[] https://github.com/ncomet
+
+* Developer since 7 years
+
+image::lectra.gif[float="right"]
+
+* Software R&D Engineer @Lectra, worldwide leader in integrated softwares, machines and cloud services for soft material industries
+
+image::bordeauxjug.jpg[float="right"]
+
+* Speaker & Member of Bordeaux JUG
+
+== Lectra
+
+image::lectra-hires.png[]
+
+== How it began
+
+_"Making Java more dynamic"_ @Devoxx France 2015
+
+icon:external-link[] https://youtu.be/vjv4idwQL7k
+
+image::rwinterhalter.png[]
+
+image::devoxx.png[]
+
+== Libraries & Frameworks
+
+== Cross Cutting Concerns
+
+== Non-intrusive
+
+* Strongly typed
+* Regardless of type
+
+== Adding behavior
+
+== Solutions
+
+* Reflection
+* Aspect Oriented Programming (AOP)
+* Bytecode generation
+
+== The famous case
+
+* Fibonacci
+
+== Perf comparison
+
+|===
+|AOP |Byte Buddy | Spring AOP
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+|===
+
+== Bytecode ?
+
+image::diag.png[diagramme, 875, 493]
+
+== Frameworks
+
+image::frameworks.png[frameworks, 875, 517]
+
+== Byte Buddy
+
+Open Source (license Apache), utilisé par `Mockito`, `Hibernate`, `Google Bazle`, https://github.com/raphw/byte-buddy/wiki/Projects-using-Byte-Buddy[et d'autres]
+
+image::stars-github.png[Stars]
+
+icon:external-link[] https://github.com/raphw/byte-buddy
+
+icon:external-link[] http://bytebuddy.net
+
+[%step]
+* Easy to use (compared to cglib, ASM, BCEL)
+* R/W bytecode in an instrumented and readable manner (builder pattern)
+* Out of API, everything is typesafe. (user type enhancement)
+
+== Demo
+
+image::demo.png[]
+
+Slides :
+
+icon:external-link[] https://ncomet.github.io/javaone2017-bytebuddy/bytebuddy.html
+
+Sources :
+
+icon:github[] https://github.com/ncomet/javaone2017-bytebuddy

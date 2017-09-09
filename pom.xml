@@ -142,6 +142,7 @@
                                         <deckjs_transition>fade</deckjs_transition>
                                         <navigation>true</navigation>
                                         <goto>true</goto>
+                                        <menu>true</menu>
                                         <status>true</status>
                                     </attributes>
                                 </configuration>
@@ -181,6 +182,8 @@
                                 <configuration>
                                     <attributes>
                                         <!-- put here the reveal.js specific attributes -->
+                                        <revealjs_transition>fade</revealjs_transition>
+                                        <revealjs_theme>beige</revealjs_theme>
                                     </attributes>
                                 </configuration>
                             </execution>
