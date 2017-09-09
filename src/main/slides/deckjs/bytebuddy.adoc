@@ -76,6 +76,18 @@ A *framework* embodies some abstract design[...] In order to use it you need to 
 * Aspect Oriented Programming (AOP)
 * Bytecode generation
 
+== Reflection
+
+== AOP
+
+== Bytecode
+
+image::diag.png[diagramme, 875, 493]
+
+== Frameworks
+
+image::frameworks.png[frameworks, 875, 517]
+
 == The famous case
 
 * Fibonacci
@@ -89,14 +101,6 @@ A *framework* embodies some abstract design[...] In order to use it you need to 
 |Cell in column 2, row 1
 |Cell in column 3, row 1
 |===
-
-== Bytecode ?
-
-image::diag.png[diagramme, 875, 493]
-
-== Frameworks
-
-image::frameworks.png[frameworks, 875, 517]
 
 == Byte Buddy
 
