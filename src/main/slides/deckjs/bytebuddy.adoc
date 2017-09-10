@@ -91,15 +91,36 @@ image::ajc.png[ajc, 600]
 == AOP
 
 * AspectJ
+** compile time weaving (`ajc`)
+** post-compile weaving (on classes and jars)
+** load time weaving (agent)
+** intercept everything
 * Spring AOP
+** proxy-based
+** works on Spring managed beans methods only
+*** Interface -> Java dynamic proxy
+*** else CGLIB bytecode generated proxy
+** good AspectJ integration if you need more
 
 == Bytecode generation
 
 image::diag.png[diagramme, 875, 493]
 
+== Frameworks
+
+image::frameworks.png[frameworks, 875, 517]
+
 == The famous case
 
 * Fibonacci
+
+image::fibotree150.png[]
+
+== Caching
+
+* Memoization
+
+image::fibomemoized.png[]
 
 == Perf comparison
 
@@ -130,13 +151,10 @@ icon:external-link[] https://github.com/raphw/byte-buddy
 icon:external-link[] http://bytebuddy.net
 
 [%step]
-* Easy to use (compared to cglib, ASM, BCEL)
-* R/W bytecode in an instrumented and readable manner (builder pattern)
+* Light
+* Easy to use (compared to CGLIB, ASM, BCEL)
+* API Builder pattern
 * Out of API, everything is typesafe. (user type enhancement)
-
-== Frameworks
-
-image::frameworks.png[frameworks, 875, 517]
 
 == Demo
 
