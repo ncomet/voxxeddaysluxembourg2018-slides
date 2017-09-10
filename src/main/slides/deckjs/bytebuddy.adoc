@@ -134,7 +134,7 @@ Calling `fibonacci(42)`, JMH benchmarks (average results)
 |Raw Fibonacci |AspectJ (agent) |AspectJ (ajc) |Byte Buddy |Spring AOP
 
 |`1123.658` ms
-|`?` ms
+|`1.142` ms (to redo)
 |`?` ms
 |`0.789` ms
 |`?` ms
