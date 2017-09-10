@@ -4,7 +4,7 @@ Nicolas Comet <n.comet@lectra.com>
 
 image::javaone-logo.png[float=right, bandeau, 100]
 
-== Who I am
+== About me
 
 image::avatar.jpg[float="right"]
 
@@ -38,55 +38,64 @@ image::devoxx.png[]
 == Cross Cutting Concerns
 
 * Non business/domain related
-* Orthogonal
+* Orthogonal preoccupations
 
 == Examples
 
-* Logging
-* Caching
-* Monitoring
-* Data validation
-* Real time constraints
-* Persistence
-* Transactions
+* Logging icon:list[]
+* Caching icon:dashboard[]
+* Monitoring icon:bar-chart[]
+* Data validation icon:check[]
+* Real time constraints icon:gears[]
+* Persistence icon:save[]
+* Transactions icon:flag-checkered[]
 * ...
 
 == Adding behavior
 
-* Transparent
-* Non intrusive
-
-== Libraries & Frameworks
-
-[quote]
-A *library* is essentially a set of functions that you can call[...] Each call does some work and returns control to the client.
-
-[quote, Martin Fowler]
-A *framework* embodies some abstract design[...] In order to use it you need to insert your behavior into various places in the framework[...] The framework's code then calls your code at these points.
-
-== Simplicity
-
 * Strongly typed
 * Regardless of type
 * Lightweight
+* Transparent
+* Non intrusive
 
-== Solutions
+== (Some) solutions
 
-* Reflection
 * Aspect Oriented Programming (AOP)
 * Bytecode generation
+* Reflection ?
 
 == Reflection
 
+`java.lang.reflect`
+
+Reading Type metamodel at runtime
+
+Calling constructors, methods, access attributes (sometimes unsafely)
+
+[%step]
+Mostly about _Introspection_
+
+== AOP concept
+
+image::concerns.png[concerns]
+
+'''
+
+image::aop.png[aop]
+
+== AspectJ
+
+image::ajc.png[ajc, 600]
+
 == AOP
 
-== Bytecode
+* AspectJ
+* Spring AOP
+
+== Bytecode generation
 
 image::diag.png[diagramme, 875, 493]
-
-== Frameworks
-
-image::frameworks.png[frameworks, 875, 517]
 
 == The famous case
 
@@ -102,6 +111,14 @@ image::frameworks.png[frameworks, 875, 517]
 |Cell in column 3, row 1
 |===
 
+== Libraries & Frameworks
+
+[quote]
+A *library* is essentially a set of functions that you can call[...] Each call does some work and returns control to the client.
+
+[quote, Martin Fowler]
+A *framework* embodies some abstract design[...] In order to use it you need to insert your behavior into various places in the framework[...] The framework's code then calls your code at these points.
+
 == Byte Buddy
 
 Open Source (license Apache), used by `Mockito`, `Hibernate`, `Google Bazle`, https://github.com/raphw/byte-buddy/wiki/Projects-using-Byte-Buddy[and others]
@@ -116,6 +133,10 @@ icon:external-link[] http://bytebuddy.net
 * Easy to use (compared to cglib, ASM, BCEL)
 * R/W bytecode in an instrumented and readable manner (builder pattern)
 * Out of API, everything is typesafe. (user type enhancement)
+
+== Frameworks
+
+image::frameworks.png[frameworks, 875, 517]
 
 == Demo
 
