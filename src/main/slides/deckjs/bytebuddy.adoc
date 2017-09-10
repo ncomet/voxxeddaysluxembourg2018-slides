@@ -76,17 +76,13 @@ Calling constructors, methods, access attributes (sometimes unsafely)
 [%step]
 Mostly about _Introspection_
 
-== AOP concept
+== AOP concepts
 
 image::concerns.png[concerns]
 
 '''
 
 image::aop.png[aop]
-
-== AspectJ
-
-image::ajc.png[ajc, 600]
 
 == AOP
 
@@ -101,6 +97,10 @@ image::ajc.png[ajc, 600]
 *** Interface -> Java dynamic proxy
 *** else CGLIB bytecode generated proxy
 ** good AspectJ integration if you need more
+
+== AspectJ
+
+image::ajc.png[ajc, 600]
 
 == Bytecode generation
 
@@ -122,14 +122,22 @@ image::fibotree150.png[]
 
 image::fibomemoized.png[]
 
+== Implementations
+
+image::demo.png[]
+
 == Perf comparison
 
-|===
-|AOP |Byte Buddy | Spring AOP
+Calling `fibonacci(42)`, JMH benchmarks (average results)
 
-|Cell in column 1, row 1
-|Cell in column 2, row 1
-|Cell in column 3, row 1
+|===
+|Raw Fibonacci |AspectJ (agent) |AspectJ (ajc) |Byte Buddy |Spring AOP
+
+|`1123.658` ms
+|`?` ms
+|`?` ms
+|`0.789` ms
+|`?` ms
 |===
 
 == Libraries & Frameworks
