@@ -98,8 +98,14 @@ image::aop.png[aop]
 *** else CGLIB bytecode generated proxy
 ** good AspectJ integration if you need more
 
-== AspectJ
+== AOP & AspectJ
 
+* *Aspect* Description of a cross cutting concern
+* *Join point* A point during the execution of code (method execution, attribute access)
+* *Advice* Action taken by an aspect at a particular join point
+* *Pointcut* A regular expression that matches join points.
+
+[%step]
 image::ajc.png[ajc, 600]
 
 == Bytecode generation
@@ -141,7 +147,7 @@ Calling `fibonacci(42)`, JMH benchmarks (average results)
 |`0.013` ms
 
 |Byte Buddy (runtime)
-|`0.789` ms
+|`0.689` ms
 
 |Spring AOP
 |`?` ms
