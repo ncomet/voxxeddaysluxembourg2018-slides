@@ -143,8 +143,11 @@ Calling `fibonacci(42)`, JMH benchmarks (average results)
 |Raw Fibonacci
 |`1123.658` ms
 
-|AspectJ (agent)
+|AspectJ (compile time)
 |`0.013` ms
+
+|Byte Buddy (compile time)
+|`?` ms
 
 |Byte Buddy (runtime)
 |`0.689` ms
