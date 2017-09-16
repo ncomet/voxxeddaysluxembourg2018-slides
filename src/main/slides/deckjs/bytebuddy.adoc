@@ -150,7 +150,7 @@ Calling `fibonacci(42)`, JMH benchmarks (average results)
 |`0.689` ms
 
 |Spring AOP
-|`?` ms
+|`~2123` ms (first time, then instant)
 |===
 
 
