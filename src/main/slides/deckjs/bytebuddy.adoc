@@ -178,7 +178,7 @@ Calling `fibonacci(42)` (average results)
 ** icon:plus-sign[] Library
 ** icon:plus-sign[] Java DSL API
 ** icon:plus-sign[] Performance
-** icon:plus-sign[] Agents
+** icon:plus-sign[] Agent writing help
 
 == Libraries & Frameworks
 
