@@ -200,9 +200,12 @@ icon:external-link[] http://bytebuddy.net
 
 [%step]
 * Light
-* Easy to use (compared to CGLIB, ASM, BCEL)
-* API Builder pattern
 * Out of API, everything is typesafe. (user type enhancement)
+* Easy to use (compared to CGLIB, ASM, BCEL)
+
+== ASM Visitor
+
+image::asm-visitor.jpg[]
 
 == Frameworks
 
