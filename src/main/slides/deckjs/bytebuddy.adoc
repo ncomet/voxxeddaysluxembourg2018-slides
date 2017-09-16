@@ -31,14 +31,19 @@ _"Making Java more dynamic"_ @Devoxx France 2015
 
 icon:external-link[] https://youtu.be/vjv4idwQL7k
 
-image::rwinterhalter.png[]
+image::rafaelwinterhalter.png[]
 
-image::devoxx.png[]
+image::rafael-winterhalter.jpg[]
+
+image::java-champion.png[150,150]
 
 == Cross Cutting Concerns
 
 * Non business/domain related
 * Orthogonal preoccupations
+
+[%step]
+image::what.gif[]
 
 == Examples
 
@@ -53,17 +58,17 @@ image::devoxx.png[]
 
 == Adding behavior
 
+* Transparent
+* Non intrusive
 * Strongly typed
 * Regardless of type
 * Lightweight
-* Transparent
-* Non intrusive
 
 == (Some) solutions
 
 * Aspect Oriented Programming (AOP)
 * Bytecode generation
-* Reflection ?
+* Reflection
 
 == Reflection
 
@@ -73,32 +78,12 @@ Reading Type metamodel at runtime
 
 Calling constructors, methods, access attributes (sometimes unsafely)
 
+It has a cost (JIT is useless)
+
 [%step]
 Mostly about _Introspection_
 
-== AOP concepts
-
-image::concerns.png[concerns]
-
-'''
-
-image::aop.png[aop]
-
 == AOP
-
-* AspectJ
-** compile time weaving (`ajc`)
-** post-compile weaving (on classes and jars)
-** load time weaving (agent)
-** intercept everything
-* Spring AOP
-** proxy-based
-** works on Spring managed beans methods only
-*** Interface -> Java dynamic proxy
-*** else CGLIB bytecode generated proxy
-** good AspectJ integration if you need more
-
-== AOP & AspectJ
 
 * *Aspect* Description of a cross cutting concern
 * *Join point* A point during the execution of code (method execution, attribute access)
@@ -108,13 +93,17 @@ image::aop.png[aop]
 [%step]
 image::ajc.png[ajc, 600]
 
+== AOP concepts
+
+image::concerns.png[concerns]
+
+'''
+
+image::aop.png[aop]
+
 == Bytecode generation
 
 image::diag.png[diagramme, 875, 493]
-
-== Frameworks
-
-image::frameworks.png[frameworks, 875, 517]
 
 == The famous case
 
@@ -128,13 +117,13 @@ image::fibotree150.png[]
 
 image::fibomemoized.png[]
 
-== Implementations
+== Some Code !
 
 image::demo.png[]
 
 == Perf comparison
 
-Calling `fibonacci(42)`, JMH benchmarks (average results)
+Calling `fibonacci(42)` (average results)
 
 [width="60%"]
 |===
@@ -146,33 +135,50 @@ Calling `fibonacci(42)`, JMH benchmarks (average results)
 |AspectJ (compile time)
 |`0.013` ms
 
-|Byte Buddy (compile time)
-|`?` ms
-
 |Byte Buddy (runtime)
 |`0.689` ms
 
 |Spring AOP
-|`~2123` ms (first time, then instant)
+|`2123` ms (first time, then instant)
 |===
+
+== Under the hood
+
+* AspectJ
+** compile time weaving (`ajc`)
+** post-compile weaving (on classes and jars)
+** load time weaving (agent)
+** intercept everything
+* Spring AOP
+** proxy-based
+*** Interface -> Java dynamic proxy
+*** else CGLIB bytecode generated proxy
+** good AspectJ integration if you need more
 
 == Pros & Cons
 
 * AspectJ
-** - Setup
-** - DSL to learn
-** + Performance
-** + Not intrusive
-** + Precision
-* Byte Buddy
-** + Library
-** + Java DSL API
-** + Performance
-* Spring AOP
-** - Not really AOP
-** - Framework
-** + Spring integration
+** icon:minus-sign[] Setup
+** icon:minus-sign[] DSL to learn
+** icon:plus-sign[] Performance
+** icon:plus-sign[] Non intrusive
+** icon:plus-sign[] Span
 
+* Spring AOP
+** icon:minus-sign[] Not really AOP
+** icon:minus-sign[] Component's methods only
+** icon:minus-sign[] / icon:plus-sign[] Framework
+** icon:plus-sign[] Spring integration
+** icon:plus-sign[] Migration to AspectJ
+
+== Pros & Cons
+
+* Byte Buddy
+** icon:minus-sign[] No compile time
+** icon:plus-sign[] Library
+** icon:plus-sign[] Java DSL API
+** icon:plus-sign[] Performance
+** icon:plus-sign[] Agents
 
 == Libraries & Frameworks
 
@@ -197,6 +203,10 @@ icon:external-link[] http://bytebuddy.net
 * Easy to use (compared to CGLIB, ASM, BCEL)
 * API Builder pattern
 * Out of API, everything is typesafe. (user type enhancement)
+
+== Frameworks
+
+image::frameworks.png[frameworks, 875, 517]
 
 == Demo
 
