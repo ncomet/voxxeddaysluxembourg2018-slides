@@ -156,6 +156,23 @@ Calling `fibonacci(42)`, JMH benchmarks (average results)
 |`~2123` ms (first time, then instant)
 |===
 
+== Pros & Cons
+
+* AspectJ
+** - Setup
+** - DSL to learn
+** + Performance
+** + Not intrusive
+** + Precision
+* Byte Buddy
+** + Library
+** + Java DSL API
+** + Performance
+* Spring AOP
+** - Not really AOP
+** - Framework
+** + Spring integration
+
 
 == Libraries & Frameworks
 
