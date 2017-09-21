@@ -78,10 +78,19 @@ Reading Type metamodel at runtime
 
 Calling constructors, methods, access attributes (sometimes unsafely)
 
-It has a cost (JIT is useless)
-
 [%step]
 Mostly about _Introspection_
+
+[%step]
+It has a cost (JIT is useless)
+
+== AOP concepts
+
+image::concerns.png[concerns]
+
+'''
+
+image::aop.png[aop]
 
 == AOP
 
@@ -93,13 +102,9 @@ Mostly about _Introspection_
 [%step]
 image::ajc.png[ajc, 600]
 
-== AOP concepts
+== Java Bytecode
 
-image::concerns.png[concerns]
-
-'''
-
-image::aop.png[aop]
+image::bytecode.png[]
 
 == Bytecode generation
 
@@ -107,7 +112,11 @@ image::diag.png[diagramme, 875, 493]
 
 == The famous case
 
-* Fibonacci
+image::fibodef.gif[]
+
+== The famous case
+
+* Call tree
 
 image::fibotree150.png[]
 
