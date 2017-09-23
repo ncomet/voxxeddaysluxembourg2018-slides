@@ -126,7 +126,7 @@ image::fibotree150.png[]
 
 image::fibomemoized.png[]
 
-== Some Code !
+== Some code !
 
 image::demo.png[]
 
