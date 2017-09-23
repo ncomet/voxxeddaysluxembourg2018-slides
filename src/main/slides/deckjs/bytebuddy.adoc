@@ -112,7 +112,9 @@ image::diag.png[diagramme, 875, 493]
 
 == The famous case
 
-image::fibodef.gif[]
+* n ∈ ℕ
+
+image::fibodef.gif[def, 800]
 
 == The famous case
 
