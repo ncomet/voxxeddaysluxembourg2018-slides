@@ -110,6 +110,10 @@ image::bytecode.png[]
 
 image::diag.png[diagramme, 875, 493]
 
+== Frameworks
+
+image::frameworks.png[frameworks, 875, 517]
+
 == The famous case
 
 * n ∈ ℕ
@@ -191,14 +195,6 @@ Calling `fibonacci(42)` (average results)
 ** icon:plus-sign[] Performance
 ** icon:plus-sign[] Agent writing help
 
-== Libraries & Frameworks
-
-[quote]
-A *library* is essentially a set of functions that you can call[...] Each call does some work and returns control to the client.
-
-[quote, Martin Fowler]
-A *framework* embodies some abstract design[...] In order to use it you need to insert your behavior into various places in the framework[...] The framework's code then calls your code at these points.
-
 == Byte Buddy
 
 Open Source (license Apache), used by `Mockito`, `Hibernate`, `Google Bazle`, https://github.com/raphw/byte-buddy/wiki/Projects-using-Byte-Buddy[and others]
@@ -209,18 +205,12 @@ icon:external-link[] https://github.com/raphw/byte-buddy
 
 icon:external-link[] http://bytebuddy.net
 
-[%step]
 * Light
-* Out of API, everything is typesafe. (user type enhancement)
-* Easy to use (compared to CGLIB, ASM, BCEL)
+* Easy to use (compared to CGLIB, BCEL, ASM)
 
 == ASM Visitor
 
 image::asm-visitor.jpg[]
-
-== Frameworks
-
-image::frameworks.png[frameworks, 875, 517]
 
 == Demo
 
