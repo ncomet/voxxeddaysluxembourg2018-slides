@@ -229,4 +229,4 @@ icon:github[] https://github.com/ncomet/javaone2017-bytebuddy
 ** AOP -> Implementing multiple cross cutting concerns
 ** Byte Buddy -> Writing libraries/frameworks or agents
 * Discovering at runtime
-** Reflexion -> Custom serialization, _nasty_ things (setting private fields...)
+** Reflection -> Custom serialization, _nasty_ things (setting private fields...)
