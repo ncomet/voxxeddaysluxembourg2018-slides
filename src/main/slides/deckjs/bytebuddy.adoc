@@ -66,9 +66,9 @@ image::what.gif[]
 
 == (Some) solutions
 
+* Reflection
 * Aspect Oriented Programming (AOP)
 * Bytecode generation
-* Reflection
 
 == Reflection
 
@@ -181,15 +181,13 @@ Calling `fibonacci(42)` (average results)
 
 * Spring AOP
 ** icon:minus-sign[] Not really AOP
-** icon:minus-sign[] Component's methods only
+** icon:minus-sign[] `@Component`'s public methods only
 ** icon:minus-sign[] / icon:plus-sign[] Framework
 ** icon:plus-sign[] Spring integration
 ** icon:plus-sign[] Migration to AspectJ
 
-== Pros & Cons
-
 * Byte Buddy
-** icon:minus-sign[] No compile time
+** icon:minus-sign[] / icon:plus-sign[] No compile time
 ** icon:plus-sign[] Library
 ** icon:plus-sign[] Java DSL API
 ** icon:plus-sign[] Performance
@@ -207,6 +205,7 @@ icon:external-link[] http://bytebuddy.net
 
 * Light
 * Easy to use (compared to CGLIB, BCEL, ASM)
+* Write your library/framework
 
 == ASM Visitor
 
@@ -223,3 +222,11 @@ icon:external-link[] https://ncomet.github.io/javaone2017-bytebuddy/bytebuddy.ht
 Sources :
 
 icon:github[] https://github.com/ncomet/javaone2017-bytebuddy
+
+== Conclusion
+
+* Adding behavior
+** AOP -> Implementing multiple cross cutting concerns
+** Byte Buddy -> Writing libraries/frameworks or agents
+* Discovering at runtime
+** Reflexion -> Custom serialization, _nasty_ things (setting private fields...)
