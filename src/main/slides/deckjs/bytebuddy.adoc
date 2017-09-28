@@ -205,7 +205,7 @@ icon:external-link[] http://bytebuddy.net
 
 * Light
 * Easy to use (compared to CGLIB, BCEL, ASM)
-* Write your library/framework
+* Become a library writer
 
 == ASM Visitor
 
