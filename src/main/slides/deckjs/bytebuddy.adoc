@@ -181,7 +181,7 @@ Calling `fibonacci(42)` (average results)
 
 * Spring AOP
 ** icon:minus-sign[] Not really AOP
-** icon:minus-sign[] `@Component`'s public methods only
+** icon:minus-sign[] Component's public methods only
 ** icon:minus-sign[] / icon:plus-sign[] Framework
 ** icon:plus-sign[] Spring integration
 ** icon:plus-sign[] Migration to AspectJ
