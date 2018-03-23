@@ -2,7 +2,7 @@
 Nicolas Comet <n.comet@lectra.com>
 :icons: font
 
-image::javaone-logo.png[float=right, bandeau, 100]
+image::voxxeddayslux.jpg[float=right, bandeau, 100]
 
 == Qui je suis
 
@@ -15,7 +15,7 @@ image::lectra.png[]
 
 image::lectra-versalis.jpg[versalis, 800]
 
-== How it all began
+== La petite histoire
 
 _"Making Java more dynamic"_ @Devoxx France 2015
 
@@ -29,52 +29,52 @@ image::java-champion.png[150,150]
 
 == Cross Cutting Concerns
 
-* Non business/domain related
-* Orthogonal preoccupations
+* Non métier/liées au domaine
+* Préoccupations transverses
 
 [%step]
 image::what.gif[]
 
-== Examples
+== Exemples
 
 * Logging icon:list[]
-* Caching icon:dashboard[]
+* Caches icon:dashboard[]
 * Monitoring icon:bar-chart[]
-* Data validation icon:check[]
-* Real time constraints icon:gears[]
-* Persistence icon:save[]
+* Validation données icon:check[]
+* Contraintes temps réel icon:gears[]
+* Persistance icon:save[]
 * Transactions icon:flag-checkered[]
 * ...
 
-== Adding behavior
+== Ajouter du comportement
 
 * Transparent
-* Non intrusive
-* Strongly typed
-* Regardless of type
-* Lightweight
+* Non intrusif
+* Fortement typé
+* Indépendamment des types
+* Léger
 
-== (Some) solutions
+== (Quelques) solutions
 
-* Reflection
-* Aspect Oriented Programming (AOP)
-* Bytecode generation
+* Réflexion
+* Programmation Orientée Aspects (AOP)
+* Génération de bytecode
 
-== Reflection
+== Réflexion
 
 `java.lang.reflect`
 
-Reading Type metamodel at runtime
+Lire le métamodèle des types à l'exécution
 
-Calling constructors, methods, access attributes (sometimes unsafely)
-
-[%step]
-Mostly about _Introspection_
+Appeler constructeurs, méthodes, accéder aux attributs (parfois de manière non sécurisée)
 
 [%step]
-It has a cost (JIT is useless)
+Surtout de l'_Introspection_
 
-== AOP concepts
+[%step]
+Ça a un coût (JIT inutile)
+
+== Concepts de l'AOP
 
 image::concerns.png[concerns]
 
@@ -84,19 +84,19 @@ image::aop.png[aop]
 
 == AOP
 
-* *Aspect* Description of a cross cutting concern
-* *Join point* A point during the execution of code (method execution, attribute access)
-* *Advice* Action taken by an aspect at a particular join point
-* *Pointcut* A regular expression that matches join points.
+* *Aspect* Description d'un cross cutting concern
+* *Join point* Un point dans le temps d'exécution (exécution d'une méthode, accès à un attribut...)
+* *Advice* Action prise par un Aspect à un Joint Point donné
+* *Pointcut* Une expression régulière qui matche un Join Point.
 
 [%step]
 image::ajc.png[ajc, 600]
 
-== Java Bytecode
+== Bytecode Java
 
 image::bytecode.png[]
 
-== Bytecode generation
+== Génération de bytecode
 
 image::diag.png[diagramme, 875, 493]
 
@@ -104,88 +104,88 @@ image::diag.png[diagramme, 875, 493]
 
 image::frameworks.png[frameworks, 875, 517]
 
-== The famous case
+== Le cas d'école
 
 * n ∈ ℕ
 
 image::fibodef.gif[def, 800]
 
-== The famous case
+== Le cas d'école
 
-* Call tree
+* Arbre d'invocations
 
 image::fibotree150.png[]
 
-== Caching
+== Mise en cache
 
-* Memoization
+* Mémoïzation
 
 image::fibomemoized.png[]
 
-== Some code !
+== Du code !
 
 image::demo.png[]
 
-== Perf comparison
+== Comparaison de performance
 
-Calling `fibonacci(42)` (average results)
+Appel de `fibonacci(42)` (temps moyens)
 
 [width="60%"]
 |===
-|Version |Time
+|Version |Temps
 
-|Raw Fibonacci
+|Fibonacci brut
 |`1123.658` ms
 
-|AspectJ (compile time)
+|AspectJ (tissage à la compilation)
 |`0.013` ms
 
-|Byte Buddy (runtime)
+|Byte Buddy (exécution)
 |`0.689` ms
 
 |Spring AOP
-|`2123` ms (first time, then instant)
+|`2123` ms (première fois, puis immédiat)
 |===
 
-== Under the hood
+== Sous le capot
 
 * AspectJ
-** compile time weaving (`ajc`)
-** post-compile weaving (on classes and jars)
-** load time weaving (agent)
-** intercept everything
+** tissage à la compilation (`ajc`)
+** tissage post-compilation (sur les classes et jars)
+** tissage au chargement (agent)
+** tout intercepter
 * Spring AOP
-** proxy-based
-*** Interface -> Java dynamic proxy
-*** else CGLIB bytecode generated proxy
-** good AspectJ integration if you need more
+** proxies
+*** Interface -> Proxy dynamique Java
+*** sinon CGLIB (proxy généré par le bytecode)
+** bonne intégration avec AspectJ si besoin
 
-== Pros & Cons
+== Avantages & Inconvénients
 
 * AspectJ
-** icon:minus-sign[] Setup
-** icon:minus-sign[] DSL to learn
+** icon:minus-sign[] Mise en place
+** icon:minus-sign[] DSL à apprendre
 ** icon:plus-sign[] Performance
-** icon:plus-sign[] Non intrusive
-** icon:plus-sign[] Span
+** icon:plus-sign[] Non intrusif
+** icon:plus-sign[] Périmètre
 
 * Spring AOP
-** icon:minus-sign[] Not really AOP
-** icon:minus-sign[] Component's public methods only
+** icon:minus-sign[] Pas vraiment de l'AOP
+** icon:minus-sign[] Méthodes publiques des composants seulement
 ** icon:minus-sign[] / icon:plus-sign[] Framework
-** icon:plus-sign[] Spring integration
-** icon:plus-sign[] Migration to AspectJ
+** icon:plus-sign[] Écosystème Spring
+** icon:plus-sign[] Migration vers AspectJ
 
 * Byte Buddy
-** icon:minus-sign[] / icon:plus-sign[] No compile time
-** icon:plus-sign[] Library
-** icon:plus-sign[] Java DSL API
+** icon:minus-sign[] / icon:plus-sign[] Pas de compile-time
+** icon:plus-sign[] Librairie
+** icon:plus-sign[] DSL Java
 ** icon:plus-sign[] Performance
-** icon:plus-sign[] Agent writing help
+** icon:plus-sign[] Assistance écriture d'agents
 
 == Byte Buddy
 
-Open Source (license Apache), used by `Mockito`, `Hibernate`, `Google Bazle`, https://github.com/raphw/byte-buddy/wiki/Projects-using-Byte-Buddy[and others]
+Open Source (license Apache), utilisé par `Mockito`, `Hibernate`, `Google Bazle`, https://github.com/raphw/byte-buddy/wiki/Projects-using-Byte-Buddy[et bien d'autres]
 
 image::stars-github.png[Stars]
 
@@ -193,9 +193,9 @@ icon:external-link[] https://github.com/raphw/byte-buddy
 
 icon:external-link[] http://bytebuddy.net
 
-* Light
-* Easy to use (compared to CGLIB, BCEL, ASM)
-* Become a library writer
+* Léger
+* Facile à utiliser (comparé à CGLIB, BCEL, ASM)
+* Écrire ses propres libs
 
 == ASM Visitor
 
@@ -215,8 +215,8 @@ icon:github[] https://github.com/ncomet/javaone2017-bytebuddy
 
 == Conclusion
 
-* Adding behavior
-** AOP -> Implementing multiple cross cutting concerns
-** Byte Buddy -> Writing libraries/frameworks or agents
-* Discovering at runtime
-** Reflection -> Custom serialization, _nasty_ things (setting private fields...)
+* Ajouter du comportement
+** AOP -> Implémenter des cross cutting concerns multiples
+** Byte Buddy -> Écriture librairies/frameworks ou agents
+* Découverte à l'exécution
+** Réflexion -> sérialisation personnalisée, choses _peu élégantes_  (setter champs privés...)
