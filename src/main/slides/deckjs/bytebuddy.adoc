@@ -1,29 +1,19 @@
-= `Byte Buddy` : bytecode gen made _easy_ !
+= `Byte Buddy` l'autre solution : le bytecode
 Nicolas Comet <n.comet@lectra.com>
 :icons: font
 
 image::javaone-logo.png[float=right, bandeau, 100]
 
-== About me
+== Qui je suis
 
-image::avatar.jpg[float="right"]
+image::bordeauxjug.jpg[float="right"]
 
 icon:twitter[] @NicolasComet +
 icon:github[] https://github.com/ncomet
 
-* Developer since 7 years
+image::lectra.png[]
 
-image::logolectra130.png[float="right"]
-
-* Software R&D Engineer @Lectra, worldwide leader in integrated softwares, machines and cloud services for soft material industries
-
-image::bordeauxjug.jpg[float="right"]
-
-* Speaker & Member of Bordeaux JUG
-
-== Lectra
-
-image::lectra-hires.png[]
+image::lectra-versalis.jpg[versalis, 800]
 
 == How it all began
 
