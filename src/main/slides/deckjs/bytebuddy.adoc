@@ -118,7 +118,7 @@ image::fibotree150.png[]
 
 == Mise en cache
 
-* Mémoïzation
+* Mémoïsation
 
 image::fibomemoized.png[]
 
