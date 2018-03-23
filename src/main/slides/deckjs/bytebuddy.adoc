@@ -1,5 +1,5 @@
 = `Byte Buddy` l'autre solution : le bytecode
-Nicolas Comet <n.comet@lectra.com>
+Nicolas Comet <nicolas.comet@gmail.com>
 :icons: font
 
 image::voxxeddayslux.jpg[float=right, bandeau, 100]
